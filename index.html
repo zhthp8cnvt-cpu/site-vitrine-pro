@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atelier Nova, des espaces pensés pour vous.">
+  <title>Atelier Nova — Design & Intérieurs</title>
+  <style>
+    :root {
+      --ink: #20231f;
+      --paper: #f7f5ef;
+      --accent: #b17b55;
+      --muted: #77786f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #dedbd2;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin-left: 22px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 45px;
+      padding: 70px 7%;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin: 18px 0;
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: normal;
+      line-height: 1.08;
+    }
+
+    .intro {
+      max-width: 450px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 23px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero-image {
+      min-height: 430px;
+      background:
+        linear-gradient(#0001, #0001),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85")
+        center/cover;
+    }
+
+    section { padding: 75px 7%; }
+
+    .services {
+      background: #eeece4;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: normal;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 26px;
+      background: var(--paper);
+      border: 1px solid #e2dfd6;
+    }
+
+    .number {
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    .card p, .contact p { color: var(--muted); }
+
+    .contact { text-align: center; }
+
+    footer {
+      padding: 25px 7%;
+      border-top: 1px solid #dedbd2;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 18px 5%; }
+      nav a { margin-left: 10px; font-size: 12px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+      }
+      .hero-image { min-height: 300px; }
+      section { padding: 55px 6%; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ATELIER NOVA</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Design & art de vivre</div>
+        <h1>Des espaces qui ont une âme.</h1>
+        <p class="intro">
+          Nous imaginons des intérieurs élégants, chaleureux
+          et adaptés à votre manière de vivre.
+        </p>
+        <a class="button" href="#contact">Parlons de votre projet ↗</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Intérieur contemporain élégant"></div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="eyebrow">Notre savoir-faire</div>
+      <h2>Le beau, le juste, le durable.</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="number">01 / CONCEPTION</div>
+          <h3>Design intérieur</h3>
+          <p>Des espaces harmonieux pensés autour de vos besoins.</p>
+        </article>
+        <article class="card">
+          <div class="number">02 / TRANSFORMATION</div>
+          <h3>Réaménagement</h3>
+          <p>Une nouvelle perspective pour révéler le potentiel d'un lieu.</p>
+        </article>
+        <article class="card">
+          <div class="number">03 / ACCOMPAGNEMENT</div>
+          <h3>Conseil personnalisé</h3>
+          <p>Des choix de matières, de couleurs et de mobilier cohérents.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="eyebrow">Et si on commençait ?</div>
+      <h2>Votre projet mérite une belle histoire.</h2>
+      <p>Contactez-nous pour échanger sur vos idées.</p>
+      <a class="button" href="mailto:contact@exemple.fr">
+        Nous contacter ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Atelier Nova — Site de démonstration à personnaliser.
+  </footer>
+</body>
+</html>
